@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct AccountView: View {
+    
+    @State var isDelete: Bool = false
+    
     var body: some View {
         NavigationView {
             List {
@@ -57,15 +60,28 @@ struct AccountView: View {
                 .listRowSeparator(.hidden)
                 
                 Section {
-                    Link(destination: URL(string: "https://www.apple.com")!) {
-                        HStack {
-                            Label("Website", systemImage: "house")
-                            Spacer()
-                            Image(systemName: "link")
-                                .foregroundColor(.secondary)
+                    if !isDelete {
+                        Link(destination: URL(string: "https://www.apple.com")!) {
+                            HStack {
+                                Label("Website", systemImage: "house")
+                                Spacer()
+                                Image(systemName: "link")
+                                    .foregroundColor(.secondary)
+                            }
+                        }
+                        .swipeActions(edge: .leading , allowsFullSwipe: true) {
+                            Button { isDelete = true } label: {
+                                Label("Delete", systemImage: "trash")
+                            }
+                            .tint(.red)
+                            Button {
+                                //
+                            } label: {
+                                Label("Pin", systemImage: "pin")
+                            }
+                            .tint(.yellow)
                         }
                     }
-                    
                     Link(destination: URL(string: "https://www.youtube.com")!) {
                         HStack {
                             Label("YouTube", systemImage: "tv")
@@ -74,7 +90,7 @@ struct AccountView: View {
                                 .foregroundColor(.secondary)
                         }
                     }
-
+                    
                 }   /* Section where "Website" */
                 .listRowSeparator(.hidden)
                 .accentColor(.primary)
