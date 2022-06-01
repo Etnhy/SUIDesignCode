@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6060EEAA284777A100D3B534 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6060EEA9284777A100D3B534 /* Styles.swift */; };
+		60A6FBE528477D910009B0B9 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6FBE428477D910009B0B9 /* AccountView.swift */; };
 		60E657E22846B31100BA2113 /* SUIDesignCodeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E657E12846B31100BA2113 /* SUIDesignCodeApp.swift */; };
 		60E657E42846B31100BA2113 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E657E32846B31100BA2113 /* ContentView.swift */; };
 		60E657E62846B31200BA2113 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60E657E52846B31200BA2113 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		6060EEA9284777A100D3B534 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		60A6FBE428477D910009B0B9 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		60E657DE2846B31100BA2113 /* SUIDesignCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SUIDesignCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60E657E12846B31100BA2113 /* SUIDesignCodeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUIDesignCodeApp.swift; sourceTree = "<group>"; };
 		60E657E32846B31100BA2113 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 				60E657E12846B31100BA2113 /* SUIDesignCodeApp.swift */,
 				60E657E32846B31100BA2113 /* ContentView.swift */,
 				6060EEA9284777A100D3B534 /* Styles.swift */,
+				60A6FBE428477D910009B0B9 /* AccountView.swift */,
 				60E657E52846B31200BA2113 /* Assets.xcassets */,
 				60E657E72846B31200BA2113 /* Preview Content */,
 			);
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60A6FBE528477D910009B0B9 /* AccountView.swift in Sources */,
 				6060EEAA284777A100D3B534 /* Styles.swift in Sources */,
 				60E657E42846B31100BA2113 /* ContentView.swift in Sources */,
 				60E657E22846B31100BA2113 /* SUIDesignCodeApp.swift in Sources */,
