@@ -9,48 +9,31 @@ import SwiftUI
 
 struct TabBar: View {
     
-    @State var selectedTab: Tab = .home
+    @AppStorage("selectedTab") var selectedTab: Tab = .home
     @State var color: Color = .teal
     @State var tabItemWidth: CGFloat = 0
     
     var body: some View {
-        ZStack(alignment: .bottom) {
-            
-            Group {
-                switch selectedTab {
-                case .home:
-                    ContentView()
-                case .explore:
-                    AccountView()
-                case .notifications:
-                    AccountView()
-                case .library:
-                    AccountView()
-                }
-            }
-            .frame(maxWidth: . infinity, maxHeight: .infinity)
+        HStack {
+            buttons
+        } // h stack
+        .padding(.horizontal, 8)
+        .padding(.top, 14)
+        .frame(height: 88, alignment: .top)
+        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 34, style: .continuous))
+        
+        .background(
+            background
+        )
+        .overlay(
+            overlay
+        )
 
-            
-            HStack {
-                buttons
-            } // h stack
-            .padding(.horizontal, 8)
-            .padding(.top, 14)
-            .frame(height: 88, alignment: .top)
-            .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 34, style: .continuous))
-            
-            .background(
-                background
-            )
-            .overlay(
-                overlay
-            )
+        .strokeStyle(34)
+        .frame(maxHeight: .infinity, alignment: .bottom)
+        .ignoresSafeArea()
+        
 
-            .strokeStyle(34)
-            .frame(maxHeight: .infinity, alignment: .bottom)
-            .ignoresSafeArea()
-            
-        }
     }
     
     // MARK: - Buttons
@@ -139,6 +122,6 @@ struct TabBar: View {
 struct TabBar_Previews: PreviewProvider {
     static var previews: some View {
         TabBar()
-            .previewInterfaceOrientation(.landscapeLeft)
+            .previewInterfaceOrientation(.portrait)
     }
 }

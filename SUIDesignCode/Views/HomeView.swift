@@ -1,13 +1,13 @@
 //
-//  ContentView.swift
+//  HomeView.swift
 //  SUIDesignCode
 //
-//  Created by Evhenii Mahlena on 31.05.2022.
+//  Created by Evhenii Mahlena on 01.06.2022.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct HomeView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8.0) {
             Spacer()
@@ -55,9 +55,9 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
-            .previewInterfaceOrientation(.portrait)
+        HomeView()
     }
 }
