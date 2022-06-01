@@ -10,27 +10,24 @@ import SwiftUI
 struct AccountView: View {
     
     @State var isDelete: Bool = false
+    @State var isPined:  Bool = false
     
     var body: some View {
         NavigationView {
             List {
-                profile
+                profile     /*  Mark - Profile   */
                 
-                menu
+                menu        /*  Mark - Menu      */
                 
-                links
+                links       /*  Mark - Links     */
                 
-                .accentColor(.primary)
-                .listRowSeparatorTint(.blue)
-                .listRowSeparator(.hidden)
-                
-                .listRowSeparator(.hidden)
-                .accentColor(.primary)
             }
             .listStyle(.insetGrouped)
             .navigationTitle("Account")
         } // Navigation View
     }
+    
+    // MARK: -  Profile
     
     var profile: some View {
         VStack(spacing: 8) {
@@ -59,8 +56,11 @@ struct AccountView: View {
         } // VSTACK
         .frame(maxWidth: .infinity)
         .padding()
-
+        
     }
+    
+    // MARK: - Menu
+    
     var menu: some View {
         Section {
             NavigationLink(destination: ContentView()) {
@@ -76,9 +76,13 @@ struct AccountView: View {
             }
             
         } /* Section where: Settings,Billing,Help */
-
+        .accentColor(.primary)
+        .listRowSeparatorTint(.blue)
+        .listRowSeparator(.hidden)
+        
     }
     
+    // MARK: - Links
     var links: some View {
         Section {
             if !isDelete {
@@ -95,12 +99,7 @@ struct AccountView: View {
                         Label("Delete", systemImage: "trash")
                     }
                     .tint(.red)
-                    Button {
-                        //
-                    } label: {
-                        Label("Pin", systemImage: "pin")
-                    }
-                    .tint(.yellow)
+                    pinButton       /* Mark - PinButton */
                 }
             }
             Link(destination: URL(string: "https://www.youtube.com")!) {
@@ -111,8 +110,24 @@ struct AccountView: View {
                         .foregroundColor(.secondary)
                 }
             }
-            
+            .swipeActions {
+                pinButton           /* Mark - PinButton */
+            }
         }   /* Section where "Website" */
+        
+        .listRowSeparator(.hidden)
+        .accentColor(.primary)
+    }
+    // MARK: - PinButton
+    var pinButton: some View {
+        Button { isPined.toggle() } label: {
+            if isPined {
+                Label("Unpin", systemImage: "pin.slash")
+            } else {
+                Label("Pin", systemImage: "pin")
+            }
+        }
+        .tint(isPined ? .gray : .yellow)
 
     }
 }
