@@ -42,6 +42,11 @@ struct AccountView: View {
                     HexagonView()
                     .offset(x: -50, y: -100)
                 )
+                .background(
+                BlobView()
+                    .offset(x: 180, y: 0)
+                    .scaleEffect(0.6)
+                )
             Text("Evhenii Mahlena")
                 .font(.title.weight(.semibold))
             HStack {
