@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		605B3928285348D400BE3552 /* AnimatebleFontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605B3927285348D400BE3552 /* AnimatebleFontModifier.swift */; };
+		605B392A28534CB200BE3552 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605B392928534CB200BE3552 /* Course.swift */; };
 		6060EEAA284777A100D3B534 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6060EEA9284777A100D3B534 /* Styles.swift */; };
 		60A6FBE528477D910009B0B9 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6FBE428477D910009B0B9 /* AccountView.swift */; };
 		60A6FBE72847ACD00009B0B9 /* HexagonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A6FBE62847ACD00009B0B9 /* HexagonView.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		605B3927285348D400BE3552 /* AnimatebleFontModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatebleFontModifier.swift; sourceTree = "<group>"; };
+		605B392928534CB200BE3552 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		6060EEA9284777A100D3B534 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		60A6FBE428477D910009B0B9 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		60A6FBE62847ACD00009B0B9 /* HexagonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonView.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			children = (
 				60ADDDE32847C21E00504194 /* Tab.swift */,
 				60B444F6284D2F6500A82E53 /* PreferenceKeys.swift */,
+				605B392928534CB200BE3552 /* Course.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				60ADDDEF2847FBE400504194 /* NavigationBar.swift in Sources */,
 				605B3928285348D400BE3552 /* AnimatebleFontModifier.swift in Sources */,
 				60A6FBE92847B1750009B0B9 /* BlobView.swift in Sources */,
+				605B392A28534CB200BE3552 /* Course.swift in Sources */,
 				60E657E42846B31100BA2113 /* ContentView.swift in Sources */,
 				60E657E22846B31100BA2113 /* SUIDesignCodeApp.swift in Sources */,
 				60ADDDED2847FAB200504194 /* FeaturedItem.swift in Sources */,
