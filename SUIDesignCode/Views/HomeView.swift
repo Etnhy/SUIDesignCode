@@ -14,7 +14,6 @@ struct HomeView: View {
     var body: some View {
         ScrollView {
             GeometryReader { proxy in
-                Text("\(proxy.frame(in: .named("scroll")).minY)")
                 Color.clear.preference(key: ScrollPreferenceKey.self, value: proxy.frame(in: .named("scroll")).minY)
             }
             FeaturedItem()
@@ -22,18 +21,19 @@ struct HomeView: View {
         }
         .coordinateSpace(name: "scroll")
         .onPreferenceChange(ScrollPreferenceKey.self, perform: { value in
-            if value < 0 {
-                hasScrolled = true
-            } else {
-                hasScrolled = false
+            withAnimation {
+                if value < 0 {
+                    hasScrolled = true
+                } else {
+                    hasScrolled = false
+                }
             }
         })
         .safeAreaInset(edge: .top, content: {
             Color.clear.frame(height: 80)
         })
         .overlay(
-            NavigationBar(title: "Featured")
-                .opacity(hasScrolled ? 1 : 0)
+            NavigationBar(title: "Featured", hasScrolled: $hasScrolled)
         )
     }
 }
