@@ -22,10 +22,10 @@ struct NavigationBar: View {
             Text(title)
                 .animatableFont(size: hasScrolled ? 22 : 34, weight: .bold)
                 .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.leading, 20)
-            .padding(.top, 20)
-            .offset(y: hasScrolled ? -4 : 0)
-
+                .padding(.leading, 20)
+                .padding(.top, 20)
+                .offset(y: hasScrolled ? -4 : 0)
+            
             
             HStack(spacing: 16) {
                 Image(systemName: "magnifyingglass")
@@ -33,7 +33,7 @@ struct NavigationBar: View {
                     .frame(width: 36, height: 36)
                     .foregroundColor(.secondary)
                     .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 14, style: .continuous))
-                .strokeStyle(14)
+                    .strokeStyle(14)
                 Image("Avatar Default")
                     .resizable()
                     .frame(width: 26, height: 26)
@@ -49,7 +49,7 @@ struct NavigationBar: View {
         }
         .frame(height: hasScrolled ? 44 : 70)
         .frame(maxHeight: .infinity, alignment: .top)
-
+        
     }
 }
 

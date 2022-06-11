@@ -48,6 +48,15 @@ struct HomeView: View {
             Color.clear.preference(key: ScrollPreferenceKey.self, value: proxy.frame(in: .named("scroll")).minY)
         }
         .frame(height: 0)
+        .onPreferenceChange(ScrollPreferenceKey.self, perform: { value in
+            withAnimation(.easeInOut) {
+                if value < 0 {
+                    hasScrolled = true
+                } else {
+                    hasScrolled = false
+                }
+            }
+        })
     }
     
     // MARK: - featured
